@@ -1,7 +1,7 @@
 用 Go 语言与 UOS.IO 交互的 API 库
 =========================
 
-[![GoDoc](https://godoc.org/github.com/uoscanada/uos-go?status.svg)](https://godoc.org/github.com/uoscanada/uos-go)
+[![GoDoc](https://godoc.org/github.com/lialvin/uos-go?status.svg)](https://godoc.org/github.com/lialvin/uos-go)
 
 该库提供对数据架构（二进制打包和JSON接口）的简单访问，
 以及对远程或本地运行的UOS.IO RPC服务器的API调用。 
@@ -27,16 +27,16 @@ fmt.Println("Permission for initn:", accountResp.Permissions[0].RequiredAuth.Key
 ```
 
 `uosio.system` 和 `uosio.token` 的 _Actions_ 合约分别在:
-* https://github.com/uoscanada/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/uoscanada/uos-go/system))
-* https://github.com/uoscanada/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/uoscanada/uos-go/token))
+* https://github.com/lialvin/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/lialvin/uos-go/system))
+* https://github.com/lialvin/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/lialvin/uos-go/token))
 
 范例
 -------
 
 看看库的用法的例子：
 
-* https://github.com/uoscanada/uos-bios/blob/master/bios/bios.go
-* https://github.com/uoscanada/uos-bios/blob/master/bios/ops.go
+* https://github.com/lialvin/uos-bios/blob/master/bios/bios.go
+* https://github.com/lialvin/uos-bios/blob/master/bios/ops.go
 * `cmd/` 下还有一些其他的 `main` 工具包。
 
 

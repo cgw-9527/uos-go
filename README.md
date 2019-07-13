@@ -3,7 +3,7 @@ UOS.IO API library for Go
 
 [点击查看中文版](./README-cn.md)
 
-[![GoDoc](https://godoc.org/github.com/uoscanada/uos-go?status.svg)](https://godoc.org/github.com/uoscanada/uos-go)
+[![GoDoc](https://godoc.org/github.com/lialvin/uos-go?status.svg)](https://godoc.org/github.com/lialvin/uos-go)
 
 This library provides simple access to data structures (binary packing
 and JSON interface) and API calls to an UOS.IO RPC server, running
@@ -31,8 +31,8 @@ fmt.Println("Permission for initn:", accountResp.Permissions[0].RequiredAuth.Key
 ```
 
 `uosio.system` and `uosio.token` contract _Actions_ are respectively in:
-* https://github.com/uoscanada/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/uoscanada/uos-go/system))
-* https://github.com/uoscanada/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/uoscanada/uos-go/token))
+* https://github.com/lialvin/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/lialvin/uos-go/system))
+* https://github.com/lialvin/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/lialvin/uos-go/token))
 
 Binaries
 --------
