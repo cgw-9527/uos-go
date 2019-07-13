@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 func NewSetRAMRate(bytesPerBlock uint16) *uos.Action {

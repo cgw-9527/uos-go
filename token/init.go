@@ -1,6 +1,6 @@
 package token
 
-import "github.com/uoscanada/uos-go"
+import "github.com/lialvin/uos-go"
 
 func init() {
 	uos.RegisterAction(AN("uosio.token"), ActN("transfer"), Transfer{})

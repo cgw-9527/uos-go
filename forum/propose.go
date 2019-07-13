@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewPropose is an action to submit a proposal for vote.

@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewRegProxy returns a `regproxy` action that lives on the

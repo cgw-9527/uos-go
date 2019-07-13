@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	uos "github.com/uoscanada/uos-go"
-	"github.com/uoscanada/uos-go/token"
+	uos "github.com/lialvin/uos-go"
+	"github.com/lialvin/uos-go/token"
 )
 
 func ExampleAPI_PushTransaction_transfer_UOS() {

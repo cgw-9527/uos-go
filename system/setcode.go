@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 func NewSetContract(account uos.AccountName, wasmPath, abiPath string) (out []*uos.Action, err error) {

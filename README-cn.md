@@ -12,7 +12,7 @@
 因为我们要追着主网 `uosio` 代码库的脚步，而它的变化又那么快。
 
 该库主网启动编排工具是 `uosio` 的基础，网址：
-https://github.com/uoscanada/uos-bios
+https://github.com/lialvin/uos-bios
 
 
 基本用法

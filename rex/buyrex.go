@@ -1,7 +1,7 @@
 package rex
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 func NewBuyREX(from uos.AccountName, amount uos.Asset) *uos.Action {

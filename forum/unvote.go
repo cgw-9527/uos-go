@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewUnVote is an action representing the action to undoing a current vote

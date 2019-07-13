@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewRefund returns a `refund` action that lives on the

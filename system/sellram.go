@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewSellRAM will sell at current market price a given number of

@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewExpire is an action to expire a proposal ahead of its natural death.

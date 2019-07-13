@@ -1,7 +1,7 @@
 package sudo
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewExec creates an `exec` action, found in the `uosio.wrap`

@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewDelegateBW returns a `delegatebw` action that lives on the

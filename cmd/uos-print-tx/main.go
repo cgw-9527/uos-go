@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/uoscanada/uos-go"
+	"github.com/lialvin/uos-go"
 )
 
 func main() {

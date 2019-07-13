@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 func ExampleAPI_GetAccount() {

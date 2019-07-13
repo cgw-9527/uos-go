@@ -12,7 +12,7 @@ import (
 
 	"math"
 
-	"github.com/uoscanada/uos-go/ecc"
+	"github.com/lialvin/uos-go/ecc"
 	"go.uber.org/zap"
 )
 

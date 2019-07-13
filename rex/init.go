@@ -1,6 +1,6 @@
 package rex
 
-import uos "github.com/uoscanada/uos-go"
+import uos "github.com/lialvin/uos-go"
 
 func init() {
 	uos.RegisterAction(REXAN, ActN("buyrex"), BuyREX{})

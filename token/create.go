@@ -1,6 +1,6 @@
 package token
 
-import uos "github.com/uoscanada/uos-go"
+import uos "github.com/lialvin/uos-go"
 
 func NewCreate(issuer uos.AccountName, maxSupply uos.Asset) *uos.Action {
 	return &uos.Action{

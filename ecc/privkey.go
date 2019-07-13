@@ -7,8 +7,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/uoscanada/uos-go/btcsuite/btcd/btcec"
-	"github.com/uoscanada/uos-go/btcsuite/btcutil"
+	"github.com/lialvin/uos-go/btcsuite/btcd/btcec"
+	"github.com/lialvin/uos-go/btcsuite/btcutil"
 )
 
 const PrivateKeyPrefix = "PVT_"

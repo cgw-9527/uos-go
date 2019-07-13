@@ -1,6 +1,6 @@
 package system
 
-import uos "github.com/uoscanada/uos-go"
+import uos "github.com/lialvin/uos-go"
 
 // NewSetPriv returns a `setpriv` action that lives on the
 // `uosio.bios` contract. It should exist only when booting a new

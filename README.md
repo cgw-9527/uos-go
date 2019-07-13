@@ -16,7 +16,7 @@ flux. Don't expect stability, as we're moving alongside the main
 `uosio` codebase, which changes very fast.
 
 This library is the basis for the `uos-bios` launch orchestrator tool
-at https://github.com/uoscanada/uos-bios
+at https://github.com/lialvin/uos-bios
 
 
 Basic usage
@@ -87,7 +87,7 @@ however.
 #### Environment Variables
 
 All examples uses by default the `https://mainnet.uos.dfuse.io` API endpoint for all
-HTTP communication and `peering.mainnet.uoscanada.com` for P2P communication.
+HTTP communication and `peering.mainnet.lialvin.com` for P2P communication.
 They can respectively be overridden by specifying environment variable
 `UOS_GO_API_URL` and `UOS_GO_P2P_ENDPOINT` respectively.
 

@@ -1,6 +1,6 @@
 package system
 
-import "github.com/uoscanada/uos-go"
+import "github.com/lialvin/uos-go"
 
 // NewNonce returns a `nonce` action that lives on the
 // `uosio.bios` contract. It should exist only when booting a new

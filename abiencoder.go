@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/uoscanada/uos-go/ecc"
+	"github.com/lialvin/uos-go/ecc"
 	"go.uber.org/zap"
 
 	"github.com/tidwall/gjson"

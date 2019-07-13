@@ -19,7 +19,7 @@ import (
 
 	"io/ioutil"
 
-	"github.com/uoscanada/uos-go/ecc"
+	"github.com/lialvin/uos-go/ecc"
 )
 
 type TransactionHeader struct {

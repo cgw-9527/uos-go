@@ -1,7 +1,7 @@
 package msig
 
 import (
-	uos "github.com/uoscanada/uos-go"
+	uos "github.com/lialvin/uos-go"
 )
 
 // NewApprove returns a `approve` action that lives on the

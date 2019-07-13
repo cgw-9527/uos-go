@@ -10,7 +10,7 @@ import (
 
 	"strings"
 
-	"github.com/uoscanada/uos-go/ecc"
+	"github.com/lialvin/uos-go/ecc"
 )
 
 type Signer interface {

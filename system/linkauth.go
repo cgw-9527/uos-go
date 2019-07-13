@@ -1,6 +1,6 @@
 package system
 
-import "github.com/uoscanada/uos-go"
+import "github.com/lialvin/uos-go"
 
 // NewLinkAuth creates an action from the `uosio.system` contract
 // called `linkauth`.
