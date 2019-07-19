@@ -1,4 +1,4 @@
-package token
+package uidsys
 
 import uos "github.com/lialvin/uos-go"
 
