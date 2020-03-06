@@ -26,7 +26,7 @@ type API struct {
 	// Header is one or more headers to be added to all outgoing calls
 	Header                  http.Header
 	DefaultMaxCPUUsageMS    uint8
-	DefaultMaxNetUsageWords uint32 // in 8-bytes words
+	//DefaultMaxNetUsageWords uint32 // in 8-bytes words
 
 	lastGetInfo      *InfoResp
 	lastGetInfoStamp time.Time
