@@ -362,7 +362,7 @@ func (sc SymbolCode) String() string {
 
 // UOSSymbol represents the standard UOS symbol on the chain.  It's
 // here just to speed up things.
-var UOSSymbol = Symbol{Precision: 4, Symbol: "UOS"}
+var UOSSymbol = Symbol{Precision: 4, Symbol: "STK"}
 
 // REXSymbol represents the standard REX symbol on the chain.  It's
 // here just to speed up things.
