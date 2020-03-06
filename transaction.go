@@ -47,7 +47,7 @@ func NewTransaction(actions []*Action, opts *TxOptions) *Transaction {
 	}
 
 	tx := &Transaction{Actions: actions}
-	tx.Fill(opts.HeadBlockID, opts.DelaySecs, opts.MaxNetUsageWords, opts.MaxCPUUsageMS)
+	tx.Fill(opts.HeadBlockID, opts.DelaySecs, opts.MaxCPUUsageMS)
 	return tx
 }
 
@@ -109,7 +109,7 @@ func unmarshalTypeError(value interface{}, reflectTypeHost interface{}, target i
 }
 
 // Fill sets the fields on a transaction.  If you pass `headBlockID`, then `api` can be nil. If you don't pass `headBlockID`, then the `api` is going to be called to fetch
-func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs, maxNetUsageWords uint32, maxCPUUsageMS uint8) {
+func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs uint32, maxCPUUsageMS uint8) {
 	tx.setRefBlock(headBlockID)
 
 	if tx.ContextFreeActions == nil {
@@ -119,7 +119,7 @@ func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs, maxNetUsageWords
 		tx.Extensions = make([]*Extension, 0, 0)
 	}
 
-	tx.MaxNetUsageWords = Varuint32(maxNetUsageWords)
+	//tx.MaxNetUsageWords = Varuint32(maxNetUsageWords)
 	tx.MaxCPUUsageMS = maxCPUUsageMS
 	tx.DelaySec = Varuint32(delaySecs)
 
