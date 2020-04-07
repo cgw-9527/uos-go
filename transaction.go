@@ -27,7 +27,7 @@ type TransactionHeader struct {
 	RefBlockNum    uint16   `json:"ref_block_num"`
 	RefBlockPrefix uint32   `json:"ref_block_prefix"`
 
-	MaxNetUsageWords Varuint32 `json:"max_net_usage_words"`
+	//MaxNetUsageWords Varuint32 `json:"max_net_usage_words"`
 	MaxCPUUsageMS    uint8     `json:"max_cpu_usage_ms"`
 	DelaySec         Varuint32 `json:"delay_sec"` // number of secs to delay, making it cancellable for that duration
 }
