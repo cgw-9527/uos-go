@@ -361,7 +361,7 @@ type ScheduledTransaction struct {
 type TxOptions struct {
 	ChainID          Checksum256 // If specified, we won't hit the API to fetch it
 	HeadBlockID      Checksum256 // If provided, don't hit API to fetch it.  This allows offline transaction signing.
-	MaxNetUsageWords uint32
+	//MaxNetUsageWords uint32
 	DelaySecs        uint32
 	MaxCPUUsageMS    uint8 // If you want to override the CPU usage (in counts of 1024)
 	//ExtraKCPUUsage uint32 // If you want to *add* some CPU usage to the estimated amount (in counts of 1024)
