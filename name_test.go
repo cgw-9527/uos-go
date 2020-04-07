@@ -14,7 +14,7 @@ func TestExtendedStringToName(t *testing.T) {
 		expectedValue uint64
 		expectedErr   error
 	}{
-		{"uosio.token", 0x5530ea033482a600, nil},
+		{"wxbio.token", 0x5530ea033482a600, nil},
 		{"1,CUSD", 293455872769, nil},
 		{"4,UOS", 1397703940, nil},
 		{"CUSD", 1146312003, nil},

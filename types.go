@@ -1049,7 +1049,7 @@ func (i *Uint128) UnmarshalJSON(data []byte) error {
 // Blob
 
 // Blob is base64 encoded data
-// https://github.com/UOSIO/fc/blob/0e74738e938c2fe0f36c5238dbc549665ddaef82/include/fc/variant.hpp#L47
+// https://github.com/wxbio/fc/blob/0e74738e938c2fe0f36c5238dbc549665ddaef82/include/fc/variant.hpp#L47
 type Blob string
 
 // Data returns decoded base64 data

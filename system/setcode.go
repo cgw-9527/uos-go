@@ -29,7 +29,7 @@ func NewSetCode(account uos.AccountName, wasmPath string) (out *uos.Action, err 
 	}
 
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("setcode"),
 		Authorization: []uos.PermissionLevel{
 			{
@@ -66,7 +66,7 @@ func NewSetABI(account uos.AccountName, abiPath string) (out *uos.Action, err er
 	}
 
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("setabi"),
 		Authorization: []uos.PermissionLevel{
 			{

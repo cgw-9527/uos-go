@@ -6,11 +6,11 @@ import (
 
 func NewSetRAMRate(bytesPerBlock uint16) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("setram"),
 		Authorization: []uos.PermissionLevel{
 			{
-				Actor:      AN("uosio"),
+				Actor:      AN("wxbio"),
 				Permission: uos.PermissionName("active"),
 			},
 		},

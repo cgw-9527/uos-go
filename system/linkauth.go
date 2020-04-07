@@ -2,7 +2,7 @@ package system
 
 import "github.com/lialvin/uos-go"
 
-// NewLinkAuth creates an action from the `uosio.system` contract
+// NewLinkAuth creates an action from the `wxbio.system` contract
 // called `linkauth`.
 //
 // `linkauth` allows you to attach certain permission to the given
@@ -12,7 +12,7 @@ import "github.com/lialvin/uos-go"
 // can sign anything) for the given operation.
 func NewLinkAuth(account, code uos.AccountName, actionName uos.ActionName, requiredPermission uos.PermissionName) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("linkauth"),
 		Authorization: []uos.PermissionLevel{
 			{

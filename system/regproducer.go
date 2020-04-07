@@ -6,10 +6,10 @@ import (
 )
 
 // NewRegProducer returns a `regproducer` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewRegProducer(producer uos.AccountName, producerKey ecc.PublicKey, url string, location uint16) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("regproducer"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: producer, Permission: PN("active")},
@@ -23,7 +23,7 @@ func NewRegProducer(producer uos.AccountName, producerKey ecc.PublicKey, url str
 	}
 }
 
-// RegProducer represents the `uosio.system::regproducer` action
+// RegProducer represents the `wxbio.system::regproducer` action
 type RegProducer struct {
 	Producer    uos.AccountName `json:"producer"`
 	ProducerKey ecc.PublicKey   `json:"producer_key"`

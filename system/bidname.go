@@ -6,7 +6,7 @@ import (
 
 func NewBidname(bidder, newname uos.AccountName, bid uos.Asset) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("bidname"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: bidder, Permission: PN("active")},
@@ -20,7 +20,7 @@ func NewBidname(bidder, newname uos.AccountName, bid uos.Asset) *uos.Action {
 	return a
 }
 
-// Bidname represents the `uosio.system_contract::bidname` action.
+// Bidname represents the `wxbio.system_contract::bidname` action.
 type Bidname struct {
 	Bidder  uos.AccountName `json:"bidder"`
 	Newname uos.AccountName `json:"newname"`

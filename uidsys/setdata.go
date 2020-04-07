@@ -17,7 +17,7 @@ func NewSetdata(key uos.AccountName, val  uint64 , op uint8 ) *uos.Action {
 	}
 }
 
-// Create represents the `create` struct on the `uosio.token` contract.
+// Create represents the `create` struct on the `wxbio.token` contract.
 type Setdata struct {
 	Key     uos.AccountName `json:"key"`
 	Val     uint64       `json:"val"`

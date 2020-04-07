@@ -1,4 +1,4 @@
-UOSIO Elliptic Curve Cryptography Wrapper
+wxbio Elliptic Curve Cryptography Wrapper
 =========================================
 
 This is a simple wrapper for `btcec`, that handles the specificities

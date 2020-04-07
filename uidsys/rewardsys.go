@@ -16,7 +16,7 @@ func NewRewardsys(newuid uos.AccountName, recommenduid uint64) *uos.Action {
 	}
 }
 
-// Transfer represents the `transfer` struct on `uosio.token` contract.
+// Transfer represents the `transfer` struct on `wxbio.token` contract.
 type Rewardsys struct {
 	Newuid     uos.AccountName `json:"newuid"`
 	Recommenduid      uint64  `json:"recommenduid"`

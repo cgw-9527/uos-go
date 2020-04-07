@@ -6,7 +6,7 @@ import (
 
 func NewBuyRAM(payer, receiver uos.AccountName, uosQuantity uint64) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("buyram"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: payer, Permission: PN("active")},
@@ -20,7 +20,7 @@ func NewBuyRAM(payer, receiver uos.AccountName, uosQuantity uint64) *uos.Action 
 	return a
 }
 
-// BuyRAM represents the `uosio.system::buyram` action.
+// BuyRAM represents the `wxbio.system::buyram` action.
 type BuyRAM struct {
 	Payer    uos.AccountName `json:"payer"`
 	Receiver uos.AccountName `json:"receiver"`

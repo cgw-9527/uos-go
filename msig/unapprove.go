@@ -5,10 +5,10 @@ import (
 )
 
 // NewUnapprove returns a `unapprove` action that lives on the
-// `uosio.msig` contract.
+// `wxbio.msig` contract.
 func NewUnapprove(proposer uos.AccountName, proposalName uos.Name, level uos.PermissionLevel) *uos.Action {
 	return &uos.Action{
-		Account:       uos.AccountName("uosio.msig"),
+		Account:       uos.AccountName("wxbio.msig"),
 		Name:          uos.ActionName("unapprove"),
 		Authorization: []uos.PermissionLevel{level},
 		ActionData:    uos.NewActionData(Unapprove{proposer, proposalName, level}),

@@ -5,10 +5,10 @@ import (
 )
 
 // NewPropose returns a `propose` action that lives on the
-// `uosio.msig` contract.
+// `wxbio.msig` contract.
 func NewPropose(proposer uos.AccountName, proposalName uos.Name, requested []uos.PermissionLevel, transaction *uos.Transaction) *uos.Action {
 	return &uos.Action{
-		Account: uos.AccountName("uosio.msig"),
+		Account: uos.AccountName("wxbio.msig"),
 		Name:    uos.ActionName("propose"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: proposer, Permission: uos.PermissionName("active")},

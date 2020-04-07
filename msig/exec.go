@@ -5,10 +5,10 @@ import (
 )
 
 // NewExec returns a `exec` action that lives on the
-// `uosio.msig` contract.
+// `wxbio.msig` contract.
 func NewExec(proposer uos.AccountName, proposalName uos.Name, executer uos.AccountName) *uos.Action {
 	return &uos.Action{
-		Account: uos.AccountName("uosio.msig"),
+		Account: uos.AccountName("wxbio.msig"),
 		Name:    uos.ActionName("exec"),
 		// TODO: double check in this package that the `Actor` is always the `proposer`..
 		Authorization: []uos.PermissionLevel{

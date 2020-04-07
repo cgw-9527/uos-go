@@ -13,7 +13,7 @@ the P2P protocol on port 9876.
 
 As of before the June launch, this library is pretty much in
 flux. Don't expect stability, as we're moving alongside the main
-`uosio` codebase, which changes very fast.
+`wxbio` codebase, which changes very fast.
 
 This library is the basis for the `uos-bios` launch orchestrator tool
 at https://github.com/lialvin/uos-bios
@@ -30,7 +30,7 @@ accountResp, _ := api.GetAccount("initn")
 fmt.Println("Permission for initn:", accountResp.Permissions[0].RequiredAuth.Keys)
 ```
 
-`uosio.system` and `uosio.token` contract _Actions_ are respectively in:
+`wxbio.system` and `wxbio.token` contract _Actions_ are respectively in:
 * https://github.com/lialvin/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/lialvin/uos-go/system))
 * https://github.com/lialvin/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/lialvin/uos-go/token))
 

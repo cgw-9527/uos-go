@@ -4,13 +4,13 @@ import (
 	uos "github.com/lialvin/uos-go"
 )
 
-// NewSetalimits sets the account limits. Requires signature from `uosio@active` account.
+// NewSetalimits sets the account limits. Requires signature from `wxbio@active` account.
 func NewSetalimits(account uos.AccountName, ramBytes, netWeight, cpuWeight int64) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("setalimit"),
 		Authorization: []uos.PermissionLevel{
-			{Actor: uos.AccountName("uosio"), Permission: PN("active")},
+			{Actor: uos.AccountName("wxbio"), Permission: PN("active")},
 		},
 		ActionData: uos.NewActionData(Setalimits{
 			Account:   account,
@@ -22,7 +22,7 @@ func NewSetalimits(account uos.AccountName, ramBytes, netWeight, cpuWeight int64
 	return a
 }
 
-// Setalimits represents the `uosio.system::setalimit` action.
+// Setalimits represents the `wxbio.system::setalimit` action.
 type Setalimits struct {
 	Account   uos.AccountName `json:"account"`
 	RAMBytes  int64           `json:"ram_bytes"`

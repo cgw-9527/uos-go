@@ -7,7 +7,7 @@ import (
 )
 
 // see: libraries/chain/contracts/abi_serializer.cpp:53...
-// see: libraries/chain/include/uosio/chain/contracts/types.hpp:100
+// see: libraries/chain/include/wxbio/chain/contracts/types.hpp:100
 type ABI struct {
 	Version          string            `json:"version"`
 	Types            []ABIType         `json:"types,omitempty"`
@@ -98,7 +98,7 @@ type ActionDef struct {
 	RicardianContract string     `json:"ricardian_contract"`
 }
 
-// TableDef defines a table. See libraries/chain/include/uosio/chain/contracts/types.hpp:78
+// TableDef defines a table. See libraries/chain/include/wxbio/chain/contracts/types.hpp:78
 type TableDef struct {
 	Name      TableName `json:"name"`
 	IndexType string    `json:"index_type"`
@@ -107,7 +107,7 @@ type TableDef struct {
 	Type      string    `json:"type"`
 }
 
-// VariantDef defines a variant type. See libraries/chain/include/uosio/chain/contracts/types.hpp:78
+// VariantDef defines a variant type. See libraries/chain/include/wxbio/chain/contracts/types.hpp:78
 type VariantDef struct {
 	Name  string   `json:"name"`
 	Types []string `json:"types,omitempty"`

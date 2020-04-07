@@ -2,14 +2,14 @@ package system
 
 import "github.com/lialvin/uos-go"
 
-// NewUpdateAuth creates an action from the `uosio.system` contract
+// NewUpdateAuth creates an action from the `wxbio.system` contract
 // called `updateauth`.
 //
 // usingPermission needs to be `owner` if you want to modify the
 // `owner` authorization, otherwise `active` will do for the rest.
 func NewUpdateAuth(account uos.AccountName, permission, parent uos.PermissionName, authority uos.Authority, usingPermission uos.PermissionName) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("updateauth"),
 		Authorization: []uos.PermissionLevel{
 			{

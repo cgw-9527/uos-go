@@ -5,10 +5,10 @@ import (
 )
 
 // NewUndelegateBW returns a `undelegatebw` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewUndelegateBW(from, receiver uos.AccountName, unstakeCPU, unstakeNet uos.Asset) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("undelegatebw"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: from, Permission: PN("active")},
@@ -22,7 +22,7 @@ func NewUndelegateBW(from, receiver uos.AccountName, unstakeCPU, unstakeNet uos.
 	}
 }
 
-// UndelegateBW represents the `uosio.system::undelegatebw` action.
+// UndelegateBW represents the `wxbio.system::undelegatebw` action.
 type UndelegateBW struct {
 	From       uos.AccountName `json:"from"`
 	Receiver   uos.AccountName `json:"receiver"`

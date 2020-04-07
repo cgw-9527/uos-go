@@ -3,7 +3,7 @@ package sudo
 import uos "github.com/lialvin/uos-go"
 
 func init() {
-	uos.RegisterAction(AN("uosio.wrap"), ActN("exec"), Exec{})
+	uos.RegisterAction(AN("wxbio.wrap"), ActN("exec"), Exec{})
 }
 
 var AN = uos.AN

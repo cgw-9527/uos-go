@@ -11,7 +11,7 @@ import (
 
 // Work-in-progress p2p comms implementation
 //
-// See /home/abourget/build/uos3/plugins/net_plugin/include/uosio/net_plugin/protocol.hpp:219
+// See /home/abourget/build/uos3/plugins/net_plugin/include/wxbio/net_plugin/protocol.hpp:219
 //
 
 type P2PMessageType byte

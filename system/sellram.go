@@ -8,7 +8,7 @@ import (
 // bytes of RAM.
 func NewSellRAM(account uos.AccountName, bytes uint64) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("sellram"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: account, Permission: uos.PermissionName("active")},
@@ -21,7 +21,7 @@ func NewSellRAM(account uos.AccountName, bytes uint64) *uos.Action {
 	return a
 }
 
-// SellRAM represents the `uosio.system::sellram` action.
+// SellRAM represents the `wxbio.system::sellram` action.
 type SellRAM struct {
 	Account uos.AccountName `json:"account"`
 	Bytes   uint64          `json:"bytes"`

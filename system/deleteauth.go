@@ -2,7 +2,7 @@ package system
 
 import "github.com/lialvin/uos-go"
 
-// NewDeleteAuth creates an action from the `uosio.system` contract
+// NewDeleteAuth creates an action from the `wxbio.system` contract
 // called `deleteauth`.
 //
 // You cannot delete the `owner` or `active` permissions.  Also, if a
@@ -10,7 +10,7 @@ import "github.com/lialvin/uos-go"
 // you will need to `unlinkauth` first.
 func NewDeleteAuth(account uos.AccountName, permission uos.PermissionName) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("deleteauth"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: account, Permission: uos.PermissionName("active")},
@@ -25,7 +25,7 @@ func NewDeleteAuth(account uos.AccountName, permission uos.PermissionName) *uos.
 }
 
 // DeleteAuth represents the native `deleteauth` action, reachable
-// through the `uosio.system` contract.
+// through the `wxbio.system` contract.
 type DeleteAuth struct {
 	Account    uos.AccountName    `json:"account"`
 	Permission uos.PermissionName `json:"permission"`

@@ -20,7 +20,7 @@ func NewStatus(account uos.AccountName, content string) *uos.Action {
 	return a
 }
 
-// Status represents the `uosio.forum::status` action.
+// Status represents the `wxbio.forum::status` action.
 type Status struct {
 	Account uos.AccountName `json:"account_name"`
 	Content string          `json:"content"`

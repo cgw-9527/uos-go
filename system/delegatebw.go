@@ -5,10 +5,10 @@ import (
 )
 
 // NewDelegateBW returns a `delegatebw` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewDelegateBW(from, receiver uos.AccountName, stakeCPU, stakeNet uos.Asset, transfer bool) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("delegatebw"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: from, Permission: PN("active")},
@@ -23,7 +23,7 @@ func NewDelegateBW(from, receiver uos.AccountName, stakeCPU, stakeNet uos.Asset,
 	}
 }
 
-// DelegateBW represents the `uosio.system::delegatebw` action.
+// DelegateBW represents the `wxbio.system::delegatebw` action.
 type DelegateBW struct {
 	From     uos.AccountName `json:"from"`
 	Receiver uos.AccountName `json:"receiver"`

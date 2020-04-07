@@ -5,10 +5,10 @@ import (
 )
 
 // NewApprove returns a `approve` action that lives on the
-// `uosio.msig` contract.
+// `wxbio.msig` contract.
 func NewApprove(proposer uos.AccountName, proposalName uos.Name, level uos.PermissionLevel) *uos.Action {
 	return &uos.Action{
-		Account:       uos.AccountName("uosio.msig"),
+		Account:       uos.AccountName("wxbio.msig"),
 		Name:          uos.ActionName("approve"),
 		Authorization: []uos.PermissionLevel{level},
 		ActionData:    uos.NewActionData(Approve{proposer, proposalName, level}),

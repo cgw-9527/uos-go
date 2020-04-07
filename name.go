@@ -33,7 +33,7 @@ func ExtendedStringToName(s string) (val uint64, err error) {
 }
 
 func StringToName(s string) (val uint64, err error) {
-	// ported from the uosio codebase, libraries/chain/include/uosio/chain/name.hpp
+	// ported from the wxbio codebase, libraries/chain/include/wxbio/chain/name.hpp
 	var i uint32
 	sLen := uint32(len(s))
 	for ; i <= 12; i++ {
@@ -68,7 +68,7 @@ func charToSymbol(c byte) byte {
 var base32Alphabet = []byte(".12345abcdefghijklmnopqrstuvwxyz")
 
 func NameToString(in uint64) string {
-	// ported from libraries/chain/name.cpp in uosio
+	// ported from libraries/chain/name.cpp in wxbio
 	a := []byte{'.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'}
 
 	tmp := in

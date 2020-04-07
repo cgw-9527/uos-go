@@ -2,7 +2,7 @@ package system
 
 import "github.com/lialvin/uos-go"
 
-// NewCancelDelay creates an action from the `uosio.system` contract
+// NewCancelDelay creates an action from the `wxbio.system` contract
 // called `canceldelay`.
 //
 // `canceldelay` allows you to cancel a deferred transaction,
@@ -11,7 +11,7 @@ import "github.com/lialvin/uos-go"
 // with that same authority.
 func NewCancelDelay(cancelingAuth uos.PermissionLevel, transactionID uos.Checksum256) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("canceldelay"),
 		Authorization: []uos.PermissionLevel{
 			cancelingAuth,

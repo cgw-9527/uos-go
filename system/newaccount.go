@@ -6,10 +6,10 @@ import (
 )
 
 // NewNewAccount returns a `newaccount` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewNewAccount(creator, newAccount uos.AccountName, publicKey ecc.PublicKey) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: creator, Permission: PN("active")},
@@ -42,11 +42,11 @@ func NewNewAccount(creator, newAccount uos.AccountName, publicKey ecc.PublicKey)
 }
 
 // NewDelegatedNewAccount returns a `newaccount` action that lives on the
-// `uosio.system` contract. It is filled with an authority structure that
+// `wxbio.system` contract. It is filled with an authority structure that
 // delegates full control of the new account to an already existing account.
 func NewDelegatedNewAccount(creator, newAccount uos.AccountName, delegatedTo uos.AccountName) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: creator, Permission: PN("active")},
@@ -85,11 +85,11 @@ func NewDelegatedNewAccount(creator, newAccount uos.AccountName, delegatedTo uos
 }
 
 // NewCustomNewAccount returns a `newaccount` action that lives on the
-// `uosio.system` contract. You can specify your own `owner` and
+// `wxbio.system` contract. You can specify your own `owner` and
 // `active` permissions.
 func NewCustomNewAccount(creator, newAccount uos.AccountName, owner, active uos.Authority) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: creator, Permission: PN("active")},
@@ -103,7 +103,7 @@ func NewCustomNewAccount(creator, newAccount uos.AccountName, owner, active uos.
 	}
 }
 
-// NewAccount represents a `newaccount` action on the `uosio.system`
+// NewAccount represents a `newaccount` action on the `wxbio.system`
 // contract. It is one of the rare ones to be hard-coded into the
 // blockchain.
 type NewAccount struct {

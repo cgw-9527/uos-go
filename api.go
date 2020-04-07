@@ -456,8 +456,8 @@ func (api *API) GetScheduledTransactions() (out *ScheduledTransactionsResp, err 
 
 func (api *API) GetProducers() (out *ProducersResp, err error) {
 	/*
-		+FC_REFLECT( uosio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
-		+FC_REFLECT( uosio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
+		+FC_REFLECT( wxbio::chain_apis::read_only::get_producers_params, (json)(lower_bound)(limit) )
+		+FC_REFLECT( wxbio::chain_apis::read_only::get_producers_result, (rows)(total_producer_vote_weight)(more) ); */
 	err = api.call("chain", "get_producers", nil, &out)
 	return
 }

@@ -9,9 +9,9 @@
 它还明白端口9876上的P2P协议。
 
 截至6月的发布之前，这个库不断的在变化。 先不要期望稳定性，
-因为我们要追着主网 `uosio` 代码库的脚步，而它的变化又那么快。
+因为我们要追着主网 `wxbio` 代码库的脚步，而它的变化又那么快。
 
-该库主网启动编排工具是 `uosio` 的基础，网址：
+该库主网启动编排工具是 `wxbio` 的基础，网址：
 https://github.com/lialvin/uos-bios
 
 
@@ -26,7 +26,7 @@ accountResp, _ := api.GetAccount("initn")
 fmt.Println("Permission for initn:", accountResp.Permissions[0].RequiredAuth.Keys)
 ```
 
-`uosio.system` 和 `uosio.token` 的 _Actions_ 合约分别在:
+`wxbio.system` 和 `wxbio.token` 的 _Actions_ 合约分别在:
 * https://github.com/lialvin/uos-go/tree/master/system ([godocs](https://godoc.org/github.com/lialvin/uos-go/system))
 * https://github.com/lialvin/uos-go/tree/master/token ([godocs](https://godoc.org/github.com/lialvin/uos-go/token))
 

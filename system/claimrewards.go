@@ -8,7 +8,7 @@ import (
 // bytes of RAM, and grant them to the `receiver` account.
 func NewClaimRewards(owner uos.AccountName) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("claimrewards"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: owner, Permission: uos.PermissionName("active")},
@@ -20,7 +20,7 @@ func NewClaimRewards(owner uos.AccountName) *uos.Action {
 	return a
 }
 
-// ClaimRewards represents the `uosio.system::claimrewards` action.
+// ClaimRewards represents the `wxbio.system::claimrewards` action.
 type ClaimRewards struct {
 	Owner uos.AccountName `json:"owner"`
 }

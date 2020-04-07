@@ -18,16 +18,16 @@ func TestActionNewAccount(t *testing.T) {
 	pubKey, err := ecc.NewPublicKey("UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV")
 	require.NoError(t, err)
 	a := &uos.Action{
-		Account: uos.AccountName("uosio"),
+		Account: uos.AccountName("wxbio"),
 		Name:    uos.ActionName("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{
-				Actor:      uos.AccountName("uosio"),
+				Actor:      uos.AccountName("wxbio"),
 				Permission: uos.PermissionName("active"),
 			},
 		},
 		ActionData: uos.NewActionData(NewAccount{
-			Creator: uos.AccountName("uosio"),
+			Creator: uos.AccountName("wxbio"),
 			Name:    uos.AccountName("abourget"),
 			Owner: uos.Authority{
 				Threshold: 1,
@@ -61,12 +61,12 @@ func TestActionNewAccount(t *testing.T) {
 
 	buf, err = json.Marshal(a)
 	assert.NoError(t, err)
-	assert.Equal(t, `{"account":"uosio","name":"newaccount","authorization":[{"actor":"uosio","permission":"active"}],"data":"0000000000ea305500000059b1abe93101000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf0100000001000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf01000000"}`, string(buf))
+	assert.Equal(t, `{"account":"wxbio","name":"newaccount","authorization":[{"actor":"wxbio","permission":"active"}],"data":"0000000000ea305500000059b1abe93101000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf0100000001000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf01000000"}`, string(buf))
 
 	buf, err = json.Marshal(a.ActionData.Data)
 	assert.NoError(t, err)
 
-	assert.Equal(t, "{\"creator\":\"uosio\",\"name\":\"abourget\",\"owner\":{\"threshold\":1,\"keys\":[{\"key\":\"UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\",\"weight\":1}]},\"active\":{\"threshold\":1,\"keys\":[{\"key\":\"UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\",\"weight\":1}]}}", string(buf))
+	assert.Equal(t, "{\"creator\":\"wxbio\",\"name\":\"abourget\",\"owner\":{\"threshold\":1,\"keys\":[{\"key\":\"UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\",\"weight\":1}]},\"active\":{\"threshold\":1,\"keys\":[{\"key\":\"UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\",\"weight\":1}]}}", string(buf))
 	// 00096e88 0000 0000 00000000 00 00 00 00 01 0000000000ea3055
 
 	// WUTz that ?
@@ -78,16 +78,16 @@ func TestActionNewAccount(t *testing.T) {
 
 func TestMarshalTransactionAndSigned(t *testing.T) {
 	a := &uos.Action{
-		Account: uos.AccountName("uosio"),
+		Account: uos.AccountName("wxbio"),
 		Name:    uos.ActionName("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{
-				Actor:      uos.AccountName("uosio"),
+				Actor:      uos.AccountName("wxbio"),
 				Permission: uos.PermissionName("active"),
 			},
 		},
 		ActionData: uos.NewActionData(NewAccount{
-			Creator: uos.AccountName("uosio"),
+			Creator: uos.AccountName("wxbio"),
 			Name:    uos.AccountName("abourget"),
 		}),
 	}
@@ -107,35 +107,35 @@ func TestMarshalTransactionAndSigned(t *testing.T) {
 
 	buf, err = json.Marshal(a)
 	assert.NoError(t, err)
-	assert.Equal(t, `{"account":"uosio","name":"newaccount","authorization":[{"actor":"uosio","permission":"active"}],"data":"0000000000ea305500000059b1abe9310000000000000000000000000000"}`, string(buf))
+	assert.Equal(t, `{"account":"wxbio","name":"newaccount","authorization":[{"actor":"wxbio","permission":"active"}],"data":"0000000000ea305500000059b1abe9310000000000000000000000000000"}`, string(buf))
 }
 
 func TestMarshalTransactionAndPack(t *testing.T) {
 	a := &uos.Action{
-		Account: uos.AccountName("uosio"),
+		Account: uos.AccountName("wxbio"),
 		Name:    uos.ActionName("newaccount"),
 		Authorization: []uos.PermissionLevel{
 			{
-				Actor:      uos.AccountName("uosio"),
+				Actor:      uos.AccountName("wxbio"),
 				Permission: uos.PermissionName("active"),
 			},
 		},
 		ActionData: uos.NewActionData(NewAccount{
-			Creator: uos.AccountName("uosio"),
+			Creator: uos.AccountName("wxbio"),
 			Name:    uos.AccountName("abourget"),
 		}),
 	}
 	b := &uos.Action{
-		Account: uos.AccountName("uosio"),
+		Account: uos.AccountName("wxbio"),
 		Name:    uos.ActionName("transfer"),
 		Authorization: []uos.PermissionLevel{
 			{
-				Actor:      uos.AccountName("uosio"),
+				Actor:      uos.AccountName("wxbio"),
 				Permission: uos.PermissionName("active"),
 			},
 		},
 		ActionData: uos.NewActionData(NewAccount{
-			Creator: uos.AccountName("uosio"),
+			Creator: uos.AccountName("wxbio"),
 			Name:    uos.AccountName("cbillett"),
 		}),
 	}

@@ -27,14 +27,14 @@ type BlockchainParameters struct {
 	// then Cpu -> CPU
 }
 
-type UOSIOGlobalState struct {
+type wxbioGlobalState struct {
 	BlockchainParameters
 	TotalStorageBytesReserved uos.Uint64 `json:"total_storage_bytes_reserved"`
 	TotalStorageStake         uos.Uint64 `json:"total_storage_stake"`
 	PaymentPerBlock           uos.Uint64 `json:"payment_per_block"`
 }
 
-// Nonce represents the `uosio.system::nonce` action. It is used to
+// Nonce represents the `wxbio.system::nonce` action. It is used to
 // add variability in a transaction, so you can send the same many
 // times in the same block, without it having the same Tx hash.
 type Nonce struct {

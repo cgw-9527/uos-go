@@ -4,7 +4,7 @@ import uos "github.com/lialvin/uos-go"
 
 func NewTransfer(from, to uos.AccountName, quantity uos.Asset, memo string) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio.token"),
+		Account: AN("wxbio.token"),
 		Name:    ActN("transfer"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: from, Permission: PN("active")},
@@ -18,7 +18,7 @@ func NewTransfer(from, to uos.AccountName, quantity uos.Asset, memo string) *uos
 	}
 }
 
-// Transfer represents the `transfer` struct on `uosio.token` contract.
+// Transfer represents the `transfer` struct on `wxbio.token` contract.
 type Transfer struct {
 	From     uos.AccountName `json:"from"`
 	To       uos.AccountName `json:"to"`

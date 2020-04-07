@@ -8,8 +8,8 @@ import (
 	"reflect"
 )
 
-// See: libraries/chain/include/uosio/chain/contracts/types.hpp:203
-// See: build/contracts/uosio.system/uosio.system.abi
+// See: libraries/chain/include/wxbio/chain/contracts/types.hpp:203
+// See: build/contracts/wxbio.system/wxbio.system.abi
 
 // SetCode represents the hard-coded `setcode` action.
 type SetCode struct {

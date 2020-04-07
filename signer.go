@@ -25,7 +25,7 @@ type Signer interface {
 	ImportPrivateKey(wifPrivKey string) error
 }
 
-// `uosiowd` wallet-based signer
+// `wxbiowd` wallet-based signer
 type WalletSigner struct {
 	api        *API
 	walletName string

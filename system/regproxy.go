@@ -5,10 +5,10 @@ import (
 )
 
 // NewRegProxy returns a `regproxy` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewRegProxy(proxy uos.AccountName, isProxy bool) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("regproxy"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: proxy, Permission: PN("active")},
@@ -20,7 +20,7 @@ func NewRegProxy(proxy uos.AccountName, isProxy bool) *uos.Action {
 	}
 }
 
-// RegProxy represents the `uosio.system::regproxy` action
+// RegProxy represents the `wxbio.system::regproxy` action
 type RegProxy struct {
 	Proxy   uos.AccountName `json:"proxy"`
 	IsProxy bool            `json:"isproxy"`

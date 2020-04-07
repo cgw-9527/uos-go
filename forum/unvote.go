@@ -20,7 +20,7 @@ func NewUnVote(voter uos.AccountName, proposalName uos.Name) *uos.Action {
 	return a
 }
 
-// UnVote represents the `uosio.forum::unvote` action.
+// UnVote represents the `wxbio.forum::unvote` action.
 type UnVote struct {
 	Voter        uos.AccountName `json:"voter"`
 	ProposalName uos.Name        `json:"proposal_name"`

@@ -23,7 +23,7 @@ func NewVote(voter uos.AccountName, proposalName uos.Name, voteValue uint8, vote
 	return a
 }
 
-// Vote represents the `uosio.forum::vote` action.
+// Vote represents the `wxbio.forum::vote` action.
 type Vote struct {
 	Voter        uos.AccountName `json:"voter"`
 	ProposalName uos.Name        `json:"proposal_name"`

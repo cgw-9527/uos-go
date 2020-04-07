@@ -2,14 +2,14 @@ package system
 
 import "github.com/lialvin/uos-go"
 
-// NewUnlinkAuth creates an action from the `uosio.system` contract
+// NewUnlinkAuth creates an action from the `wxbio.system` contract
 // called `unlinkauth`.
 //
 // `unlinkauth` detaches a previously set permission from a
 // `code::actionName`. See `linkauth`.
 func NewUnlinkAuth(account, code uos.AccountName, actionName uos.ActionName) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("unlinkauth"),
 		Authorization: []uos.PermissionLevel{
 			{

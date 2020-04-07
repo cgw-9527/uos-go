@@ -17,4 +17,4 @@ var AN = uos.AN
 var PN = uos.PN
 var ActN = uos.ActN
 
-var ForumAN = AN("uosio.forum")
+var ForumAN = AN("wxbio.forum")

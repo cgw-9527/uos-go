@@ -14,7 +14,7 @@ import (
 
 var abiString = `
 {
-	"version": "uosio::abi/1.0",
+	"version": "wxbio::abi/1.0",
 	"types": [{
 		"new_type_name": "new_type_name_1",
 		"type": "name"
@@ -117,7 +117,7 @@ func TestABIEncoder_encodeMissingActionStruct(t *testing.T) {
 
 	abiString := `
 {
-	"version": "uosio::abi/1.0",
+	"version": "wxbio::abi/1.0",
 	"types": [{
 		"new_type_name": "new.type.name.1",
 		"type": "name"
@@ -143,7 +143,7 @@ func TestABIEncoder_encodeErrorInBase(t *testing.T) {
 
 	abiString := `
 {
-	"version": "uosio::abi/1.0",
+	"version": "wxbio::abi/1.0",
 	"types": [{
 		"new_type_name": "new.type.name.1",
 		"type": "name"
@@ -267,7 +267,7 @@ func TestABI_Write(t *testing.T) {
 		{"caseName": "time_point_sec err", "typeName": "time_point_sec", "expectedValue": "0100000000000000", "json": "{\"testField\":\"bad date\"", "expectedError": fmt.Errorf("writing field: time_point_sec: parsing time \"bad date\" as \"2006-01-02T15:04:05\": cannot parse \"bad date\" as \"2006\"")},
 		{"caseName": "block_timestamp_type", "typeName": "block_timestamp_type", "expectedValue": "ec8a4546", "json": "{\"testField\":\"2018-09-05T12:48:54-04:00\"}", "expectedError": nil},
 		{"caseName": "block_timestamp_type err", "typeName": "block_timestamp_type", "expectedValue": "ec8a4546", "json": "{\"testField\":\"this is not a date\"}", "expectedError": fmt.Errorf("writing field: block_timestamp_type: parsing time \"this is not a date\" as \"2006-01-02T15:04:05.999999-07:00\": cannot parse \"this is not a date\" as \"2006\"")},
-		{"caseName": "Name", "typeName": "name", "expectedValue": "0000000000ea3055", "json": "{\"testField\":\"uosio\"}", "expectedError": nil},
+		{"caseName": "Name", "typeName": "name", "expectedValue": "0000000000ea3055", "json": "{\"testField\":\"wxbio\"}", "expectedError": nil},
 		{"caseName": "Name", "typeName": "name", "expectedValue": "", "json": "{\"testField\":\"waytolongnametomakethetestcrash\"}", "expectedError": fmt.Errorf("writing field: name: waytolongnametomakethetestcrash is to long. expected length of max 12 characters")},
 		{"caseName": "bytes", "typeName": "bytes", "expectedValue": "0e746869732e69732e612e74657374", "json": "{\"testField\":\"746869732e69732e612e74657374\"}", "expectedError": nil},
 		{"caseName": "bytes err", "typeName": "bytes", "expectedValue": "0e746869732e69732e612e74657374", "json": "{\"testField\":\"those are not bytes\"}", "expectedError": fmt.Errorf("writing field: bytes: encoding/hex: invalid byte: U+0074 't'")},

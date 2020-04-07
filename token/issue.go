@@ -4,10 +4,10 @@ import uos "github.com/lialvin/uos-go"
 
 func NewIssue(to uos.AccountName, quantity uos.Asset, memo string) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio.token"),
+		Account: AN("wxbio.token"),
 		Name:    ActN("issue"),
 		Authorization: []uos.PermissionLevel{
-			{Actor: AN("uosio"), Permission: PN("active")},
+			{Actor: AN("wxbio"), Permission: PN("active")},
 		},
 		ActionData: uos.NewActionData(Issue{
 			To:       to,
@@ -17,7 +17,7 @@ func NewIssue(to uos.AccountName, quantity uos.Asset, memo string) *uos.Action {
 	}
 }
 
-// Issue represents the `issue` struct on the `uosio.token` contract.
+// Issue represents the `issue` struct on the `wxbio.token` contract.
 type Issue struct {
 	To       uos.AccountName `json:"to"`
 	Quantity uos.Asset       `json:"quantity"`

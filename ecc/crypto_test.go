@@ -72,7 +72,7 @@ func TestNewPublicKeyAndSerializeCompress(t *testing.T) {
 func TestNewRandomPrivateKey(t *testing.T) {
 	key, err := NewRandomPrivateKey()
 	require.NoError(t, err)
-	// taken from uosiojs-ecc:common.test.js:12
+	// taken from wxbiojs-ecc:common.test.js:12
 	assert.Regexp(t, "^5[HJK].*", key.String())
 }
 

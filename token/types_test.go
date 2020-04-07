@@ -11,14 +11,14 @@ import (
 
 //func TestPackAction(t *testing.T) {
 //	a := &uos.Action{
-//		Account: AN("uosio"),
+//		Account: AN("wxbio"),
 //		Name:    ActN("transfer"),
 //		Authorization: []uos.PermissionLevel{
-//			{AN("uosio"), PN("active")},
+//			{AN("wxbio"), PN("active")},
 //		},
 //		Data: Transfer{
 //			From:     AN("abourget"),
-//			To:       AN("uosio"),
+//			To:       AN("wxbio"),
 //			Quantity: uos.Asset{Amount: 123123, Symbol: uos.UOSSymbol},
 //		},
 //	}
@@ -29,7 +29,7 @@ import (
 //
 //	buf, err = json.Marshal(a)
 //	assert.NoError(t, err)
-//	assert.Equal(t, `{"account":"uosio","authorization":[{"actor":"uosio","permission":"active"}],"data":"00000059b1abe9310000000000ea3055f3e001000000000004454f530000000000","name":"transfer"}`, string(buf))
+//	assert.Equal(t, `{"account":"wxbio","authorization":[{"actor":"wxbio","permission":"active"}],"data":"00000059b1abe9310000000000ea3055f3e001000000000004454f530000000000","name":"transfer"}`, string(buf))
 //
 //	/* 0000000000ea3055 000000572d3ccdcd 01 0000000000ea3055 00000000a8ed3232
 //	   21

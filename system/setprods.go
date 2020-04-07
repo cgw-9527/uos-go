@@ -6,15 +6,15 @@ import (
 )
 
 // NewSetPriv returns a `setpriv` action that lives on the
-// `uosio.bios` contract. It should exist only when booting a new
+// `wxbio.bios` contract. It should exist only when booting a new
 // network, as it is replaced using the `uos-bios` boot process by the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewSetProds(producers []ProducerKey) *uos.Action {
 	a := &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("setprods"),
 		Authorization: []uos.PermissionLevel{
-			{Actor: AN("uosio"), Permission: PN("active")},
+			{Actor: AN("wxbio"), Permission: PN("active")},
 		},
 		ActionData: uos.NewActionData(SetProds{
 			Schedule: producers,
@@ -23,7 +23,7 @@ func NewSetProds(producers []ProducerKey) *uos.Action {
 	return a
 }
 
-// SetProds is present in `uosio.bios` contract. Used only at boot time.
+// SetProds is present in `wxbio.bios` contract. Used only at boot time.
 type SetProds struct {
 	Schedule []ProducerKey `json:"schedule"`
 }

@@ -148,7 +148,7 @@ func TestSignaturePublicKeyExtraction(t *testing.T) {
 
 }
 
-func TestUOSIOCSigningComparison(t *testing.T) {
+func TestwxbioCSigningComparison(t *testing.T) {
 	// try with: ec sign -k 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3 '{"expiration":"2018-03-21T23:02:32","region":0,"ref_block_num":2156,"ref_block_prefix":1532582828,"packed_bandwidth_words":0,"context_free_cpu_bandwidth":0,"context_free_actions":[],"actions":[],"signatures":[],"context_free_data":[]}'
 	wif := "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3" // corresponds to: UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
 	privKey, err := NewPrivateKey(wif)
@@ -176,7 +176,7 @@ func TestNoduosSignatureComparison(t *testing.T) {
 	privKey, err := NewPrivateKey(wif)
 	require.NoError(t, err)
 
-	// produce with `cluos create account uosio abourget UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+	// produce with `cluos create account wxbio abourget UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV UOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
 	// transaction:
 	// chainID + 30d3b35a0000be0194c22fe70000000000010000000000ea305500409e9a2264b89a010000000000ea305500000000a8ed32327c0000000000ea305500000059b1abe93101000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf01000001000000010002c0ded2bc1f1305fb0faac5e6c03ee3a1924234985427b6167ca569d13df435cf0100000100000000010000000000ea305500000000a8ed323201000000
 	// hashes to:
@@ -191,8 +191,8 @@ func TestNoduosSignatureComparison(t *testing.T) {
 }
 
 func TestSignatureUnmarshalChecksum(t *testing.T) {
-	fromUOSIOC := "SIG_K1_KW4qcHDh6ziqWELRAsFx42sgPuP3VfCpTKX4D5A3uZhFb3fzojTeGohja19g4EJa9Zv7SrGZ47H8apo1sNa2bwPvGwW2bb" // simply checked the last 2 bytes
-	_, err := NewSignature(fromUOSIOC)
+	fromwxbioC := "SIG_K1_KW4qcHDh6ziqWELRAsFx42sgPuP3VfCpTKX4D5A3uZhFb3fzojTeGohja19g4EJa9Zv7SrGZ47H8apo1sNa2bwPvGwW2bb" // simply checked the last 2 bytes
+	_, err := NewSignature(fromwxbioC)
 	require.Equal(t, "signature checksum failed, found a9c72981 expected a9c72982", err.Error())
 }
 

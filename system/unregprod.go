@@ -5,10 +5,10 @@ import (
 )
 
 // NewUnregProducer returns a `unregprod` action that lives on the
-// `uosio.system` contract.
+// `wxbio.system` contract.
 func NewUnregProducer(producer uos.AccountName) *uos.Action {
 	return &uos.Action{
-		Account: AN("uosio"),
+		Account: AN("wxbio"),
 		Name:    ActN("unregprod"),
 		Authorization: []uos.PermissionLevel{
 			{Actor: producer, Permission: PN("active")},
@@ -19,7 +19,7 @@ func NewUnregProducer(producer uos.AccountName) *uos.Action {
 	}
 }
 
-// UnregProducer represents the `uosio.system::unregprod` action
+// UnregProducer represents the `wxbio.system::unregprod` action
 type UnregProducer struct {
 	Producer uos.AccountName `json:"producer"`
 }

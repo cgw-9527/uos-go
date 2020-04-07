@@ -5,10 +5,10 @@ import (
 )
 
 // NewCancel returns a `cancel` action that lives on the
-// `uosio.msig` contract.
+// `wxbio.msig` contract.
 func NewCancel(proposer uos.AccountName, proposalName uos.Name, canceler uos.AccountName) *uos.Action {
 	return &uos.Action{
-		Account: uos.AccountName("uosio.msig"),
+		Account: uos.AccountName("wxbio.msig"),
 		Name:    uos.ActionName("cancel"),
 		// TODO: double check in this package that the `Actor` is always the `proposer`..
 		Authorization: []uos.PermissionLevel{

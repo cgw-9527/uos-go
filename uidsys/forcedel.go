@@ -16,7 +16,7 @@ func NewForcedel(account_name uos.AccountName, newname uos.AccountName ) *uos.Ac
 	}
 }
 
-// Issue represents the `issue` struct on the `uosio.token` contract.
+// Issue represents the `issue` struct on the `wxbio.token` contract.
 type Forcedel struct {
 	Account_name     uos.AccountName    `json:"account_name"`
 	Newname          uos.AccountName      `json:"newname"`	
