@@ -1,8 +1,8 @@
 package bnet
 
 import (
-	uos "github.com/lialvin/uos-go"
-	"github.com/lialvin/uos-go/ecc"
+	uos "github.com/tkblack/uos-go"
+	"github.com/tkblack/uos-go/ecc"
 )
 
 type BNetMessageType byte

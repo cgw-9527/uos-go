@@ -1,6 +1,6 @@
 package uidsys
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 func NewSetdata(key uos.AccountName, val  uint64 , op uint8 ) *uos.Action {
 	return &uos.Action{

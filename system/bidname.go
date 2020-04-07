@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 func NewBidname(bidder, newname uos.AccountName, bid uos.Asset) *uos.Action {

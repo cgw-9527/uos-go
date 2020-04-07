@@ -1,6 +1,6 @@
 package system
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 // NewSetPriv returns a `setpriv` action that lives on the
 // `wxbio.bios` contract. It should exist only when booting a new

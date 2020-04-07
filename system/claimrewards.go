@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewClaimRewards will buy at current market price a given number of

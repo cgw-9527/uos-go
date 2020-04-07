@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"testing"
 
-	uos "github.com/lialvin/uos-go"
-	"github.com/lialvin/uos-go/ecc"
+	uos "github.com/tkblack/uos-go"
+	"github.com/tkblack/uos-go/ecc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

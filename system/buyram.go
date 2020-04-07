@@ -1,7 +1,7 @@
 package system
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 func NewBuyRAM(payer, receiver uos.AccountName, uosQuantity uint64) *uos.Action {

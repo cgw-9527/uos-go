@@ -1,7 +1,7 @@
 package rex
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 func NewREXExec(user uos.AccountName, max uint16) *uos.Action {

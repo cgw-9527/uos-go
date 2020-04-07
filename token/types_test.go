@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lialvin/uos-go"
+	"github.com/tkblack/uos-go"
 	"github.com/stretchr/testify/assert"
 )
 

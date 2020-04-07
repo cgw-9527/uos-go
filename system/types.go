@@ -1,6 +1,6 @@
 package system
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 // BlockchainParameters are all the params we can set through `setparams`.
 type BlockchainParameters struct {

@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewUnPost is an action undoing a post that is active

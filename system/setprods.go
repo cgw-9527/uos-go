@@ -1,8 +1,8 @@
 package system
 
 import (
-	uos "github.com/lialvin/uos-go"
-	"github.com/lialvin/uos-go/ecc"
+	uos "github.com/tkblack/uos-go"
+	"github.com/tkblack/uos-go/ecc"
 )
 
 // NewSetPriv returns a `setpriv` action that lives on the

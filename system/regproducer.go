@@ -1,8 +1,8 @@
 package system
 
 import (
-	uos "github.com/lialvin/uos-go"
-	"github.com/lialvin/uos-go/ecc"
+	uos "github.com/tkblack/uos-go"
+	"github.com/tkblack/uos-go/ecc"
 )
 
 // NewRegProducer returns a `regproducer` action that lives on the

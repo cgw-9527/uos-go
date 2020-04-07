@@ -1,6 +1,6 @@
 package system
 
-import "github.com/lialvin/uos-go"
+import "github.com/tkblack/uos-go"
 
 // NewNonce returns a `nonce` action that lives on the
 // `wxbio.bios` contract. It should exist only when booting a new

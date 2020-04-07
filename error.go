@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lialvin/uos-go/uoserr"
+	"github.com/tkblack/uos-go/uoserr"
 )
 
 // APIError represents the errors as reported by the server

@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewPost is an action representing a simple message to be posted

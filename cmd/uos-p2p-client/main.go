@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/lialvin/uos-go/p2p"
+	"github.com/tkblack/uos-go/p2p"
 )
 
 var peer = flag.String("peer", "localhost:9876", "peer to connect to")

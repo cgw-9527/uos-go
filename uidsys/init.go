@@ -1,6 +1,6 @@
 package uidsys
 
-import "github.com/lialvin/uos-go"
+import "github.com/tkblack/uos-go"
 
 func init() {
 	uos.RegisterAction(AN("uosuidwallet"), ActN("setdata"), Setdata{})

@@ -3,7 +3,7 @@ package ecc
 import (
 	"fmt"
 
-	"github.com/lialvin/uos-go/btcsuite/btcutil/base58"
+	"github.com/tkblack/uos-go/btcsuite/btcutil/base58"
 )
 
 type innerR1Signature struct {

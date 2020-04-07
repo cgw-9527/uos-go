@@ -1,7 +1,7 @@
 package msig
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewPropose returns a `propose` action that lives on the

@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // CleanProposal is an action to flush proposal and allow RAM used by it.

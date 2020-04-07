@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewVote is an action representing a simple vote to be broadcast

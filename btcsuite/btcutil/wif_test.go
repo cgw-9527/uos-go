@@ -7,8 +7,8 @@ package btcutil_test
 import (
 	"testing"
 
-	"github.com/lialvin/uos-go/btcsuite/btcd/btcec"
-	. "github.com/lialvin/uos-go/btcsuite/btcutil"
+	"github.com/tkblack/uos-go/btcsuite/btcd/btcec"
+	. "github.com/tkblack/uos-go/btcsuite/btcutil"
 )
 
 func TestEncodeDecodeWIF(t *testing.T) {

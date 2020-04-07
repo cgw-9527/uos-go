@@ -1,7 +1,7 @@
 package msig
 
 import (
-	"github.com/lialvin/uos-go"
+	"github.com/tkblack/uos-go"
 )
 
 func init() {

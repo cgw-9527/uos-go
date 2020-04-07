@@ -1,6 +1,6 @@
 package forum
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 func init() {
 	uos.RegisterAction(ForumAN, ActN("clnproposal"), CleanProposal{})

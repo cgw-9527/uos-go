@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-    uos "github.com/lialvin/uos-go"
+    uos "github.com/tkblack/uos-go"
 )
 
 

@@ -1,7 +1,7 @@
 package msig
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewExec returns a `exec` action that lives on the

@@ -1,7 +1,7 @@
 package forum
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // Status is an action to set a status update for a given account on the forum contract.

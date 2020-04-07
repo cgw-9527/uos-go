@@ -1,6 +1,6 @@
 package uidsys
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 func NewForcedel(account_name uos.AccountName, newname uos.AccountName ) *uos.Action {
 	return &uos.Action{

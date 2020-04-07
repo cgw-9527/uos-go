@@ -1,7 +1,7 @@
 package rex
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 func NewWithdraw(owner uos.AccountName, amount uos.Asset) *uos.Action {

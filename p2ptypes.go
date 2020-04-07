@@ -8,7 +8,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 
-	"github.com/lialvin/uos-go/ecc"
+	"github.com/tkblack/uos-go/ecc"
 )
 
 type P2PMessage interface {

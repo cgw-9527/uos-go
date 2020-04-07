@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lialvin/uos-go/btcsuite/btcd/btcec"
-	"github.com/lialvin/uos-go/btcsuite/btcutil/base58"
+	"github.com/tkblack/uos-go/btcsuite/btcd/btcec"
+	"github.com/tkblack/uos-go/btcsuite/btcutil/base58"
 	"golang.org/x/crypto/ripemd160"
 )
 

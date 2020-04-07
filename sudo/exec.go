@@ -1,7 +1,7 @@
 package sudo
 
 import (
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 // NewExec creates an `exec` action, found in the `wxbio.wrap`

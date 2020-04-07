@@ -1,8 +1,8 @@
 package system
 
 import (
-	"github.com/lialvin/uos-go"
-	"github.com/lialvin/uos-go/ecc"
+	"github.com/tkblack/uos-go"
+	"github.com/tkblack/uos-go/ecc"
 )
 
 // NewNewAccount returns a `newaccount` action that lives on the

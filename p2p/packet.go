@@ -1,7 +1,7 @@
 package p2p
 
 import (
-	"github.com/lialvin/uos-go"
+	"github.com/tkblack/uos-go"
 )
 
 type Envelope struct {

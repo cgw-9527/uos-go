@@ -1,6 +1,6 @@
 package token
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 func NewIssue(to uos.AccountName, quantity uos.Asset, memo string) *uos.Action {
 	return &uos.Action{

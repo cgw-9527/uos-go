@@ -1,6 +1,6 @@
 package msig
 
-import uos "github.com/lialvin/uos-go"
+import uos "github.com/tkblack/uos-go"
 
 type ProposalRow struct {
 	ProposalName       uos.Name              `json:"proposal_name"`

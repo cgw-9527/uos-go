@@ -1,6 +1,6 @@
 package system
 
-import "github.com/lialvin/uos-go"
+import "github.com/tkblack/uos-go"
 
 // NewUnlinkAuth creates an action from the `wxbio.system` contract
 // called `unlinkauth`.

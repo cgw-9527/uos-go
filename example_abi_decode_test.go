@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	uos "github.com/lialvin/uos-go"
+	uos "github.com/tkblack/uos-go"
 )
 
 func ExampleABI_DecodeTableRowTyped() {
