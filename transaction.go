@@ -28,8 +28,8 @@ type TransactionHeader struct {
 	RefBlockPrefix uint32   `json:"ref_block_prefix"`
 
 	//MaxNetUsageWords Varuint32 `json:"max_net_usage_words"`
-	MaxCPUUsageMS    uint8     `json:"max_cpu_usage_ms"`
-	DelaySec         Varuint32 `json:"delay_sec"` // number of secs to delay, making it cancellable for that duration
+	MaxCPUUsageMS uint8     `json:"max_cpu_usage_ms"`
+	DelaySec      Varuint32 `json:"delay_sec"` // number of secs to delay, making it cancellable for that duration
 }
 
 type Transaction struct { // WARN: is a `variant` in C++, can be a SignedTransaction or a Transaction.
@@ -47,7 +47,10 @@ func NewTransaction(actions []*Action, opts *TxOptions) *Transaction {
 	}
 
 	tx := &Transaction{Actions: actions}
-	tx.Fill(opts.HeadBlockID, opts.DelaySecs, opts.MaxCPUUsageMS)
+	/* modify by tanke begin */
+	//tx.Fill(opts.HeadBlockID, opts.DelaySecs, opts.MaxCPUUsageMS)
+	tx.Fill(opts.HeadBlockID, opts.DelaySecs, opts.MaxCPUUsageMS, opts.Expiration)
+	/* modify by tanke end */
 	return tx
 }
 
@@ -109,7 +112,7 @@ func unmarshalTypeError(value interface{}, reflectTypeHost interface{}, target i
 }
 
 // Fill sets the fields on a transaction.  If you pass `headBlockID`, then `api` can be nil. If you don't pass `headBlockID`, then the `api` is going to be called to fetch
-func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs uint32, maxCPUUsageMS uint8) {
+func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs uint32, maxCPUUsageMS uint8, expiration JSONTime) {
 	tx.setRefBlock(headBlockID)
 
 	if tx.ContextFreeActions == nil {
@@ -123,7 +126,11 @@ func (tx *Transaction) Fill(headBlockID Checksum256, delaySecs uint32, maxCPUUsa
 	tx.MaxCPUUsageMS = maxCPUUsageMS
 	tx.DelaySec = Varuint32(delaySecs)
 
-	tx.SetExpiration(30 * time.Second)
+	/* modify by tanke begin */
+	//tx.SetExpiration(30 * time.Second)
+	expiration.Time = expiration.Time.Add(30 * time.Second)
+	tx.Expiration = expiration
+	/* modify by tanke end */
 }
 
 func (tx *Transaction) setRefBlock(blockID []byte) {
@@ -359,13 +366,18 @@ type ScheduledTransaction struct {
 // TxOptions represents options you want to pass to the transaction
 // you're sending.
 type TxOptions struct {
-	ChainID          Checksum256 // If specified, we won't hit the API to fetch it
-	HeadBlockID      Checksum256 // If provided, don't hit API to fetch it.  This allows offline transaction signing.
+	ChainID     Checksum256 // If specified, we won't hit the API to fetch it
+	HeadBlockID Checksum256 // If provided, don't hit API to fetch it.  This allows offline transaction signing.
 	//MaxNetUsageWords uint32
-	DelaySecs        uint32
-	MaxCPUUsageMS    uint8 // If you want to override the CPU usage (in counts of 1024)
+	DelaySecs     uint32
+	MaxCPUUsageMS uint8 // If you want to override the CPU usage (in counts of 1024)
 	//ExtraKCPUUsage uint32 // If you want to *add* some CPU usage to the estimated amount (in counts of 1024)
 	Compress CompressionType
+
+	/* modify by tanke begin */
+	//
+	Expiration JSONTime
+	/* modify by tanke end */
 }
 
 // FillFromChain will load ChainID (for signing transactions) and
@@ -387,6 +399,11 @@ func (opts *TxOptions) FillFromChain(api *API) error {
 		if opts.ChainID == nil {
 			opts.ChainID = info.ChainID
 		}
+		/* modify by tanke begin */
+		//
+		opts.Expiration = info.HeadBlockTime
+		/* modify by tanke end */
+
 	}
 
 	return nil
